@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investment Opportunity: Open Mind Center (OMC)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6EEE7;
+    --bg-deep:#EFE1D5;
+    --ink:#241C16;
+    --ink-soft:#4A4038;
+    --navy:#1D2B3A;
+    --clay:#B9713F;
+    --clay-soft:#E4C4A8;
+    --sage:#7C8B6F;
+    --line:#D9C6B4;
+    --card:#FCF8F3;
+    --max:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Inter',sans-serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    margin:0 0 .5em;
+    color:var(--ink);
+  }
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.72rem;
+    color:var(--clay);
+    font-weight:500;
+  }
+  a{color:var(--clay);}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:120px 0 90px;
+    background:
+      radial-gradient(600px 300px at 85% -10%, rgba(185,113,63,.16), transparent 60%),
+      var(--bg);
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .hero .eyebrow{margin-bottom:22px;display:block;}
+  .hero h1{
+    font-size:clamp(2.2rem,4.6vw,3.6rem);
+    line-height:1.05;
+    max-width:18ch;
+  }
+  .hero .sub{
+    margin-top:22px;
+    max-width:56ch;
+    font-size:1.1rem;
+    color:var(--ink-soft);
+  }
+  .hero-strip{
+    position:absolute; right:-10%; top:8%;
+    width:520px;height:520px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--clay-soft), transparent 70%);
+    opacity:.7;
+    filter:blur(10px);
+  }
+
+  /* ---------- TABLE OF CONTENTS (document style) ---------- */
+  .toc-page{
+    background:var(--bg);
+    border-bottom:1px solid var(--line);
+    padding:64px 0 56px;
+  }
+  .toc-page .eyebrow{display:block; margin-bottom:6px;}
+  .toc-page h2{font-size:clamp(1.6rem,3vw,2.1rem); margin-bottom:28px;}
+  .toc-list{
+    list-style:none;
+    margin:0; padding:0;
+  }
+  .toc-list li{
+    border-bottom:1px solid var(--line);
+  }
+  .toc-list li:first-child{border-top:1px solid var(--line);}
+  .toc-list a{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    text-decoration:none;
+    color:var(--ink);
+    padding:13px 4px;
+    font-weight:600;
+    font-size:1rem;
+    transition:color .15s;
+  }
+  .toc-list a:hover{color:var(--clay);}
+  .toc-list a:hover .dots{border-color:var(--clay);}
+  .toc-list .dots{
+    flex:1;
+    border-bottom:1.5px dotted var(--line);
+    height:0;
+    margin-bottom:5px;
+    transition:border-color .15s;
+  }
+  .toc-list .page-num{
+    font-family:'Inter',sans-serif;
+    font-size:.82rem;
+    color:var(--ink-soft);
+    font-weight:400;
+    min-width:1.6em;
+    text-align:right;
+  }
+  .toc-list li.sub a{
+    padding-left:26px;
+    font-weight:400;
+    font-size:.92rem;
+    color:var(--ink-soft);
+  }
+  .toc-list li.sub a:hover{color:var(--clay);}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  section h2{font-size:clamp(1.5rem,2.8vw,2rem);}
+  section > .wrap > p{max-width:72ch;color:var(--ink-soft);}
+  .lede{font-size:1.05rem;}
+
+  .grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+    margin-top:20px;
+  }
+  @media(max-width:700px){.grid-2{grid-template-columns:1fr;}}
+
+  ul.clean{padding-left:1.1em; margin:14px 0; color:var(--ink-soft);}
+  ul.clean li{margin-bottom:8px;}
+
+  /* ---------- CARDS ---------- */
+  .callout{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:4px solid var(--clay);
+    border-radius:6px;
+    padding:24px 26px;
+    margin:26px 0;
+  }
+  .callout b{color:var(--ink);}
+
+  /* ---------- TABLES ---------- */
+  .table-wrap{overflow-x:auto; margin:24px 0;}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--card);
+    border-radius:8px;
+    overflow:hidden;
+    font-size:.94rem;
+  }
+  thead th{
+    background:var(--navy);
+    color:#F4EDE4;
+    text-align:left;
+    padding:12px 16px;
+    font-weight:600;
+    font-size:.82rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+  tbody td{
+    padding:12px 16px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr.highlight td{
+    background:var(--clay-soft);
+    font-weight:600;
+  }
+  td small{color:var(--ink-soft); font-style:italic;}
+
+  /* ---------- PATHWAYS ---------- */
+  .pathways{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-top:24px;
+  }
+  @media(max-width:900px){.pathways{grid-template-columns:1fr 1fr;}}
+  @media(max-width:520px){.pathways{grid-template-columns:1fr;}}
+  .path-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:22px 18px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .path-card h3{font-size:1.1rem;margin-bottom:8px;}
+  .path-card p{font-size:.9rem;color:var(--ink-soft);margin:4px 0;}
+  .path-card ul{margin:6px 0 10px; padding-left:1.1em; font-size:.9rem; color:var(--ink-soft);}
+  .path-card ul li{margin-bottom:4px;}
+
+  /* ---------- FUNNEL ---------- */
+  .funnel{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    margin:32px 0;
+  }
+  .funnel-step{
+    width:100%; max-width:520px;
+    background:var(--card);
+    border:1px solid var(--sage);
+    border-radius:8px;
+    padding:14px 20px;
+    text-align:center;
+  }
+  .funnel-step b{display:block;font-size:.98rem;}
+  .funnel-step span{font-size:.82rem;color:var(--ink-soft);}
+  .funnel-arrow{color:var(--sage); font-size:1.1rem;}
+  .funnel-branches{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    width:100%;
+    max-width:700px;
+  }
+  @media(max-width:600px){.funnel-branches{grid-template-columns:1fr 1fr;}}
+  .funnel-branches div{
+    background:#EDE7F5;
+    border:1px solid #C9BEDD;
+    border-radius:8px;
+    padding:12px;
+    text-align:center;
+    font-size:.85rem;
+  }
+  .funnel-branches b{display:block;font-family:'Inter',sans-serif;font-size:1.05rem;}
+
+  /* ---------- TEAM ---------- */
+  .team-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:34px;
+    margin-top:24px;
+  }
+  .team-card{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:22px;
+    align-items:start;
+  }
+  @media(max-width:520px){.team-card{grid-template-columns:80px 1fr;}}
+  .team-card img{
+    width:100%; aspect-ratio:1/1; object-fit:cover;
+    border-radius:50%;
+    filter:grayscale(1);
+    border:1px solid var(--line);
+  }
+  .team-card h3{font-size:1.1rem;margin-bottom:2px;}
+  .team-card p{color:var(--ink-soft); font-size:.94rem; margin:6px 0 0;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  .contact{
+    background:var(--navy);
+    color:#F1E8DC;
+    padding:70px 0 60px;
+  }
+  .contact h2{color:#fff;}
+  .contact a{color:var(--clay-soft);}
+  .contact .details{margin-top:18px; display:flex; flex-direction:column; gap:6px; font-family:'Inter',sans-serif; font-size:.92rem;}
+  .contact .links{margin-top:26px; display:flex; flex-direction:column; gap:6px;}
+  footer{
+    text-align:center;
+    padding:26px 0 50px;
+    font-family:'Inter',sans-serif;
+    font-size:.75rem;
+    color:var(--ink-soft);
+    background:var(--navy);
+  }
+
+  .anchor-offset{scroll-margin-top:70px;}
+
+  .note{
+    font-size:.85rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin-top:6px;
+  }
+
+  /* ---------- IMAGE PLACEHOLDERS ---------- */
+  .img-frame{
+    position:relative;
+    width:100%;
+    border-radius:10px;
+    overflow:hidden;
+    background:var(--card);
+    border:1.5px dashed var(--line);
+  }
+  .img-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .img-frame .placeholder-fallback{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    height:100%;
+    padding:20px;
+    text-align:center;
+    color:var(--ink-soft);
+  }
+  .img-frame .placeholder-fallback .icon{font-size:1.6rem; opacity:.55;}
+  .img-frame .placeholder-fallback .fname{
+    font-family:'Inter',sans-serif;
+    font-size:.78rem;
+    background:var(--bg-deep);
+    padding:4px 10px;
+    border-radius:5px;
+    color:var(--ink);
+  }
+  .img-frame .placeholder-fallback .desc{font-size:.78rem; max-width:26ch;}
+
+  .img-hero{aspect-ratio:16/9; margin-top:40px;}
+  .img-wide{aspect-ratio:16/9; margin:26px 0;}
+  .img-square{aspect-ratio:1/1;}
+
+  .img-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin:26px 0;
+  }
+  @media(max-width:700px){.img-gallery{grid-template-columns:1fr 1fr;}}
+  @media(max-width:460px){.img-gallery{grid-template-columns:1fr;}}
+  .img-gallery .img-frame{aspect-ratio:4/3;}
+
+  /* ---------- PASSWORD GATE ---------- */
+  #gate{
+    position:fixed; inset:0; z-index:999;
+    background:var(--navy);
+    display:flex; align-items:center; justify-content:center;
+    padding:24px;
+  }
+  #gate .box{
+    background:var(--card);
+    border-radius:12px;
+    padding:44px 38px;
+    max-width:380px;
+    width:100%;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+  }
+  #gate .eyebrow{display:block; margin-bottom:8px;}
+  #gate h2{font-size:1.4rem; margin-bottom:6px;}
+  #gate p{color:var(--ink-soft); font-size:.9rem; margin-bottom:24px;}
+  #gate input[type="password"]{
+    width:100%;
+    padding:12px 14px;
+    border-radius:7px;
+    border:1px solid var(--line);
+    background:#fff;
+    font-family:'Inter',sans-serif;
+    font-size:1rem;
+    margin-bottom:14px;
+  }
+  #gate input[type="password"]:focus{outline:2px solid var(--clay); outline-offset:1px;}
+  #gate button{
+    width:100%;
+    padding:12px 14px;
+    border:none;
+    border-radius:7px;
+    background:var(--clay);
+    color:#fff;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    cursor:pointer;
+  }
+  #gate button:hover{background:#a4632f;}
+  #gate .err{
+    color:#B23A2E;
+    font-size:.85rem;
+    margin-top:12px;
+    min-height:1.2em;
+  }
+  body.locked{overflow:hidden;}
+  body.locked > *:not(#gate){display:none;}
+</style>
+</head>
+<body class="locked">
+
+<div id="gate">
+  <div class="box">
+    <span class="eyebrow">Private document</span>
+    <h2>Open Mind Center</h2>
+    <p>Enter the password to view this investment proposal.</p>
+    <form id="gate-form" autocomplete="off">
+      <input type="password" id="gate-input" placeholder="Password" autofocus inputmode="text" autocomplete="off">
+      <button type="submit" id="gate-submit">Enter</button>
+    </form>
+    <div class="err" id="gate-err"></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-strip" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow">Bridge Financing Proposal · August 2026</span>
+    <h1>Investment Opportunity: Open Mind Center (OMC)</h1>
+    <p class="sub">A Behavioral Intelligence (BI) enhanced Human Flourishing Co-Living Community in Pai, Northern Thailand</p>
+
+    <div class="img-frame img-hero">
+      <img src="images/hero-cover.jpg" alt="Open Mind Center bungalows at sunset"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="placeholder-fallback" style="display:flex;">
+        <span class="icon">🖼️</span>
+        <span class="fname">images/hero-cover.jpg</span>
+        <span class="desc">Cover photo — OMC bungalows on stilts among the trees</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="toc-page">
+  <div class="wrap">
+    <span class="eyebrow">Bridge Financing Proposal</span>
+    <h2>Table of Contents</h2>
+    <ul class="toc-list">
+      <li><a href="#summary"><span>Executive Summary</span><span class="dots"></span><span class="page-num">3</span></a></li>
+      <li><a href="#context"><span>Context</span><span class="dots"></span><span class="page-num">4</span></a></li>
+      <li><a href="#property"><span>About the Property - Open Mind Center</span><span class="dots"></span><span class="page-num">5</span></a></li>
+      <li><a href="#proposal"><span>Investment Proposal - Bridge Funding Loan</span><span class="dots"></span><span class="page-num">7</span></a></li>
+      <li class="sub"><a href="#legal-structure"><span>1. Legal Structure</span><span class="dots"></span><span class="page-num">7</span></a></li>
+      <li class="sub"><a href="#financial-model"><span>2. Current and intended Financial Model</span><span class="dots"></span><span class="page-num">7</span></a></li>
+      <li class="sub"><a href="#funds"><span>3. Use of Funds Breakdown</span><span class="dots"></span><span class="page-num">8</span></a></li>
+      <li class="sub"><a href="#valuation"><span>4. Current Valuation</span><span class="dots"></span><span class="page-num">9</span></a></li>
+      <li class="sub"><a href="#captable"><span>5. Cap Table OMC Ownership</span><span class="dots"></span><span class="page-num">10</span></a></li>
+      <li class="sub"><a href="#growth-strategy"><span>6. Growth Strategy</span><span class="dots"></span><span class="page-num">10</span></a></li>
+      <li class="sub"><a href="#terms"><span>7. Bridge Loan Terms (Summary)</span><span class="dots"></span><span class="page-num">11</span></a></li>
+      <li><a href="#future"><span>Appendix 1 - Future Funding Strategy &amp; Community Development (2027)</span><span class="dots"></span><span class="page-num">12</span></a></li>
+      <li class="sub"><a href="#infrastructure"><span>Infrastructure and Building Development</span><span class="dots"></span><span class="page-num">13</span></a></li>
+      <li><a href="#community"><span>Appendix 2 - Community Building - The "Path of Human Flourishing" Journey</span><span class="dots"></span><span class="page-num">14</span></a></li>
+      <li class="sub"><a href="#founding-community"><span>Founding Community (118 Humans)</span><span class="dots"></span><span class="page-num">15</span></a></li>
+      <li class="sub"><a href="#participation-pathways"><span>Participation Pathways</span><span class="dots"></span><span class="page-num">16</span></a></li>
+      <li><a href="#team"><span>Appendix 3 - About Us - Who We Are</span><span class="dots"></span><span class="page-num">22</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXECUTIVE SUMMARY -->
+<section id="summary" class="anchor-offset">
+  <div class="wrap">
+    <h2>Executive Summary</h2>
+    <p class="lede">Open Mind Center (OMC) is a former retreat and meditation center in Pai, Thailand, being revived as a Behavioral Intelligence-enhanced co-living and retreat community. We are raising $180,000 in bridge financing, structured as 100% interest-bearing loans (5% per annum, 1-year term), to complete the final payment on the property and secure full ownership outright. The land and existing buildings - including two currently income-generating villas - stand behind the loan as security.</p>
+    <p>At maturity, lenders individually choose either full repayment with interest, or conversion into an OMC equity-equivalent with revenue share at the then-current valuation, positioned ahead of a planned mid-2027 crowdfunding round targeting approximately $600,000 for renovation and expansion.</p>
+    <p>This bridge round funds land acquisition only; it does not include renovation costs, which will be raised separately once ownership is secured. Beyond the immediate opportunity, OMC is envisioned as an extension of the Hummingbird Behavioral Intelligence ecosystem - a founding community of up to 118 members across four participation pathways, built around Behavioral Intelligence coaching and a gradual trust-building journey from first contact to long-term co-living membership.</p>
+  </div>
+</section>
+
+<!-- CONTEXT -->
+<section id="context" class="anchor-offset">
+  <div class="wrap">
+    <h2>Context</h2>
+    <p>We are currently raising bridge financing to secure full ownership of the Open Mind Center property and buildings in Pai, Thailand. The land is currently held by the seller, with 25% of the purchase price already paid. The remaining 75% must be paid to complete the purchase and secure the property outright. Of that remaining balance, a portion is already committed through our Thai land partner, leaving a defined funding gap. For that gap, we are inviting private investors to provide interest-bearing loans, with the option — at the lender's discretion — to convert the loan into an equity-equivalent at maturity.</p>
+  </div>
+</section>
+
+<!-- PROPERTY -->
+<section id="property" class="anchor-offset">
+  <div class="wrap">
+    <h2>About the Property - Open Mind Center</h2>
+    <div class="grid-2">
+      <p>Open Mind Center (OMC) is a former retreat and meditation center that operated for many years before being left abandoned during the COVID era. We have taken over the property and signed an agreement for full ownership by the end of 2026 — though the seller's current legal situation requires us to move faster than originally planned and complete the final payment now rather than later.</p>
+      <p>The property includes four intact bungalows, each with river views and sweeping vistas of the surrounding mountain range and the Pai Canyon, one of the region's most iconic natural landmarks. Set slightly outside the town center, the location is exceptionally quiet — an ideal setting for retreats and immersive nature experiences. A meditation hall and a spacious main building (large enough to house a restaurant, communal spaces, and a kitchen) anchor the site, complemented by expansive terraces and panoramic views throughout the grounds.</p>
+    </div>
+    <div class="img-frame img-wide">
+      <img src="images/property-site-map.jpg" alt="Aerial site map of Open Mind Center showing bungalows, main building, and villas"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="placeholder-fallback" style="display:flex;">
+        <span class="icon">🗺️</span>
+        <span class="fname">images/property-site-map.jpg</span>
+        <span class="desc">Aerial site map — bamboo &amp; white bungalows, main building, offices, work area, bunk house, villas</span>
+      </div>
+    </div>
+    <div class="img-frame img-wide">
+      <img src="images/property-villas-exterior.jpg" alt="Exterior view of the OMC bungalows on stilts"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="placeholder-fallback" style="display:flex;">
+        <span class="icon">🏡</span>
+        <span class="fname">images/property-villas-exterior.jpg</span>
+        <span class="desc">Bungalow exterior, front-facing view</span>
+      </div>
+    </div>
+    <div class="callout">
+      Perhaps the property's most distinctive asset is direct access to natural hot springs, with soaking pools already in place and room to expand further. Two additional villas on the property, currently operating as Airbnb rentals, are included in the acquisition and factor into future development plans.
+    </div>
+    <p>Located in Pai, a mountain town increasingly recognized as a growing hub for digital nomads, wellness, creativity, and intentional community, OMC is positioned to become a dedicated co-living and retreat space for people drawn to personal growth, co-creation, cultural regeneration, and human flourishing.</p>
+    <p>Check the Airbnb rentals: <a href="https://www.airbnb.com/rooms/1407774332634231555" target="_blank" rel="noopener">https://www.airbnb.com/rooms/1407774332634231555</a></p>
+    <div class="img-frame img-wide">
+      <img src="images/property-airbnb-collage.jpg" alt="Amazing Hot Springs House Pai Thailand — Airbnb listing photo collage"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="placeholder-fallback" style="display:flex;">
+        <span class="icon">🛁</span>
+        <span class="fname">images/property-airbnb-collage.jpg</span>
+        <span class="desc">"Amazing Hot Springs House" — Airbnb listing photo collage</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPOSAL -->
+<section id="proposal" class="anchor-offset">
+  <div class="wrap">
+    <h2>Investment Proposal - Bridge Funding Loan</h2>
+
+    <h3 id="legal-structure" style="margin-top:36px;font-size:1.15rem;">1. Legal Structure</h3>
+    <ul class="clean">
+      <li>OMC is a separate Thai legal entity, owned by the seller.</li>
+      <li>OMC owns the land (including the retreat center buildings and the two existing villas) directly.</li>
+      <li>Once the sale is completed, the property and buildings will be transferred and owned 99% by HUMMINGBIRD HOTELS PAIRADISE CO., LTD, (Thai entity) and 1% by our second Thai partner Pasit.</li>
+    </ul>
+
+    <h3 id="financial-model" style="margin-top:36px;font-size:1.15rem;">2. Current and intended Financial Model</h3>
+    <ul class="clean">
+      <li>OMC is pre-revenue. There is no financial projection or revenue model finalized yet.</li>
+      <li>Two villas on the property are currently rented out via Airbnb — a small income the property generates today.</li>
+      <li>Long-term intention: develop OMC into a combination of co-living village and retreat center / hotel / resort for retreats, workshops, and hospitality, following a similar model as Pairadise Resort.</li>
+      <li>Investor security: the land with the existing buildings and the two villas themselves stand behind the bridge loan. After the land is bought, another round of fundraising will begin to cover a major renovation to generate meaningful and sustainable revenue.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- USE OF FUNDS -->
+<section id="funds" class="anchor-offset">
+  <div class="wrap">
+    <h2>3. Use of Funds Breakdown</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Amount (THB)</th><th>Amount (USD, approx.)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Total land purchase price</b></td><td>~16,000,000</td><td>~$480,000</td></tr>
+          <tr><td>Already paid (25%)</td><td>~4,000,000</td><td>~$120,000</td></tr>
+          <tr><td>Remaining balance owed</td><td>~12,000,000</td><td>~$360,000</td></tr>
+          <tr><td>Covered by first Thai partner, Jump</td><td>~3,000,000</td><td>~$90,000</td></tr>
+          <tr><td>Covered by Ting</td><td>~3,000,000</td><td>~$90,000</td></tr>
+          <tr class="highlight"><td><i>Remaining funding gap</i></td><td><i>~6,000,000</i></td><td><i>~$180,000</i></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">100% of the funds raised in this bridge round go toward completing the land payment only. Renovation and other development costs are not included in this raise and are being covered separately.</p>
+  </div>
+</section>
+
+<!-- VALUATION -->
+<section id="valuation" class="anchor-offset">
+  <div class="wrap">
+    <h2>4. Current Valuation</h2>
+    <ul class="clean">
+      <li>Basis for current valuation: the purchase price of the land.</li>
+      <li>Upgrades, investments, and already completed renovations (&gt;$15,000) not taken into account.</li>
+      <li>At today's actual land purchasing cost, 1% equity = $4,800, which is below its market value.</li>
+      <li>The market value would include the 2 years of running the villas on Airbnb with possible returning customers and all the upgrades and repairs made during this period, with a conservative estimate of $5,500 per 1%.</li>
+      <li>However, we are setting the value at only $5,000 per 1% to express goodwill and appreciation of the time-sensitive critical support.</li>
+      <li>If OMC raises further funds next year at a higher valuation, 1% equity is expected to reprice upward - roughly $6,000 per 1% based on current projections (~20% ROI)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CAP TABLE -->
+<section id="captable" class="anchor-offset">
+  <div class="wrap">
+    <h2>5. Cap Table OMC Ownership</h2>
+    <p>Planned equity holders are Pairadise and our second Thai partner, Pasit. This setup ensures full compliance with Thai law and not using a nominee structure:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Owner</th><th>Amount (THB)</th><th>Percentage</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              HUMMINGBIRD HOTELS PAIRADISE CO., LTD
+              <ul style="margin:6px 0 0; padding-left:1.1em;">
+                <li>Ting &amp; friends: 49%</li>
+                <li>First Thai Partner Jump &amp; father (investors): 27%</li>
+                <li>Thai current &amp; past employees: 24%</li>
+              </ul>
+              <small>(this reflects ownership within Pairadise, which in turn holds 99% of OMC)</small>
+            </td>
+            <td>15,840,000 THB</td>
+            <td>99%</td>
+          </tr>
+          <tr>
+            <td>Second Thai Partner<br><small>(Ting's adopted brother Pasit)</small></td>
+            <td>160,000 THB</td>
+            <td>1%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="growth-strategy" style="margin-top:44px;">6. Growth Strategy</h2>
+    <ul class="clean">
+      <li>Immediate priority is securing the land purchase. No committed development plan or renovation timeline exists yet.</li>
+      <li>Once the land is secured, the team intends to develop a fuller concept and vision for OMC as a co-living, retreat &amp; hospitality destination, building on the existing Pairadise Resort model, operated by the team behind this project.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- LOAN TERMS -->
+<section id="terms" class="anchor-offset">
+  <div class="wrap">
+    <h2>7. Bridge Loan Terms (Summary)</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Term</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Raise target</td><td><b>$180,000</b></td></tr>
+          <tr><td>Structure</td><td>100% loan</td></tr>
+          <tr><td>Minimum volume</td><td>$10,000</td></tr>
+          <tr><td>Loan term</td><td>1 year (until August 2027)</td></tr>
+          <tr><td>Interest rate</td><td>5% per annum</td></tr>
+          <tr><td>Security</td><td>Land and buildings as an asset, possible liquidation</td></tr>
+          <tr><td>At maturity</td><td>Each lender individually chooses either<br>1. repayment of principal plus interest, or<br>2. conversion into OMC equity equivalent with revenue share at the then-current valuation</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- APPENDIX 1 -->
+<section id="future" class="anchor-offset">
+  <div class="wrap">
+    <h2>Appendix 1 - Future Funding Strategy &amp; Community Development (2027)</h2>
+    <p>A crowdfunding round where participants pre-pay for their stay is planned for approximately one year from now (target: mid-2027), with a fundraising goal of approximately $600,000.</p>
+    <p>The funds will be used to:</p>
+    <ul class="clean">
+      <li>Repay $189,000 in loans, including $9,000 in accrued interest.</li>
+      <li>Allocate $11,000 to compensate the humans who put work into the fund-raising campaign.</li>
+      <li>Allocate approximately $100,000 for operational costs, including on-site renovation management, day-to-day property management, and operational support during the redevelopment phase.</li>
+      <li>Fund building additional bungalows, rooms, renovations and infrastructure improvements, budgeted as the remaining approximately $300,000 of the $600,000 after operation cost (viable at the minimum of $200,000 if the full fundraising goal is not achieved).</li>
+      <li>Establish a valuation and conversion reference point for existing and future lenders who may wish to convert their loans into equity-equivalent with revenue share in future financing rounds.</li>
+    </ul>
+    <p>As a contingency plan, if the crowdfunding campaign does not reach its minimum objectives, the property remains a valuable underlying asset and can be sold to fully repay the outstanding loan.</p>
+
+    <h3 id="infrastructure" style="margin-top:36px;">Infrastructure and Building Development</h3>
+    <p>The $300,000 (viable at a minimum of $200,000) will allow us to renovate and upgrade the current existing structures and build additional bungalows and accommodations for up to 60+ people with private accommodations.</p>
+    <p><b>The following images are intended to give an impression of what can be created within the defined budget.</b></p>
+    <div class="img-gallery">
+      <div class="img-frame">
+        <img src="images/vision-lounge-interior.jpg" alt="Vision: communal lounge interior"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-fallback" style="display:flex;">
+          <span class="icon">🛋️</span>
+          <span class="fname">images/vision-lounge-interior.jpg</span>
+        </div>
+      </div>
+      <div class="img-frame">
+        <img src="images/vision-outdoor-tub.jpg" alt="Vision: outdoor soaking tub area"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-fallback" style="display:flex;">
+          <span class="icon">🛁</span>
+          <span class="fname">images/vision-outdoor-tub.jpg</span>
+        </div>
+      </div>
+      <div class="img-frame">
+        <img src="images/vision-meditation-hall.jpg" alt="Vision: meditation hall interior"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-fallback" style="display:flex;">
+          <span class="icon">🧘</span>
+          <span class="fname">images/vision-meditation-hall.jpg</span>
+        </div>
+      </div>
+      <div class="img-frame">
+        <img src="images/vision-entrance-arch.jpg" alt="Vision: bamboo entrance archway"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-fallback" style="display:flex;">
+          <span class="icon">⛩️</span>
+          <span class="fname">images/vision-entrance-arch.jpg</span>
+        </div>
+      </div>
+      <div class="img-frame">
+        <img src="images/vision-kitchen-bar.jpg" alt="Vision: kitchen and bar area"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-fallback" style="display:flex;">
+          <span class="icon">🍽️</span>
+          <span class="fname">images/vision-kitchen-bar.jpg</span>
+        </div>
+      </div>
+      <div class="img-frame">
+        <img src="images/vision-garden-path.jpg" alt="Vision: mosaic garden path"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-fallback" style="display:flex;">
+          <span class="icon">🌿</span>
+          <span class="fname">images/vision-garden-path.jpg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPENDIX 2 -->
+<section id="community" class="anchor-offset">
+  <div class="wrap">
+    <h2>Appendix 2 - Community Building - The "Path of Human Flourishing" Journey</h2>
+    <p>Our intention is to develop an entrepreneurial community of committed cocreators for long-term co-living. Beyond just creating a model for living in harmony with each other, the land and the local community, we strive to become a generative hub pioneering various projects and creating an ecosystem of ventures to support human flourishing and improve the quality of life in areas like movement, eating, connection, work, sleep and others.</p>
+    <p>We are inviting value-aligned humans through a crowdfunding campaign to invest in their future stay at the center (2028 onward) and use the generated funds to accomplish the renovations and ensure the operational readiness of the place.</p>
+    <p>We are inviting a community focused on human flourishing that bridges science, spirituality, art, and technology. Based on the inner technology of Behavioral Intelligence (BI), we are developing a transformational journey that is both curating the right constellation of people and, at the same time, continuously building capacity for the people joining on this path.</p>
+    <p>If you like to learn more about Behavioral Intelligence, please look at the attached vision deck that expands on the concept in depth.</p>
+    <p>Interpersonal challenges are not only the main reason for failed communities and projects but also the biggest cost factor when it comes to working together. We are focusing the entire co-creation journey on expanding our awareness and capacity to deal with our often times outdated beliefs and strategies proactively. For us, living and working together is not only measured by the outcome of projects and businesses but mostly and foremost, by the personal growth and transformation that we are experiencing.</p>
+
+    <h3 id="founding-community" style="margin-top:40px;">Founding Community (118 Humans)</h3>
+    <div class="callout">
+      <b>Target:</b><br>58 members (plus 60 retreat participants)
+    </div>
+    <p>Participants who resonate deeply with the vision may choose to become members of the Founding Community through the crowdfunding campaign. They pay a fixed amount in 2027 to finance the upgrade and renovations which guarantees them a corresponding number of nights to stay at the community for two years once completed, approximately 2028 onwards.</p>
+    <p>Instead of offering a single membership model, we provide four participation pathways, allowing people to choose the level of involvement that best fits their lifestyle while helping build the community together.</p>
+
+    <h3 id="participation-pathways" style="margin-top:40px;">Participation Pathways</h3>
+
+    <div class="pathways">
+      <div class="path-card">
+        <h3>Founder's Path (8 people)</h3>
+        <p>Time Commitment: 250 nights per year</p>
+        <ul>
+          <li>Total accommodation contribution (2 years): $10,000</li>
+          <li>Effective rate: approximately $20 per night</li>
+        </ul>
+        <p>Designed for people who wish to make OMC their primary home and actively contribute to building the community.</p>
+        <p>Examples: Founders such as Ting and Jonathan</p>
+      </div>
+      <div class="path-card">
+        <h3>Co-Creator's Path (20 people)</h3>
+        <p>Time Commitment: 150 nights per year</p>
+        <ul>
+          <li>Total accommodation contribution (2 years): $9,000</li>
+          <li>Effective rate: approximately $30 per night</li>
+        </ul>
+        <p>For members who want to spend significant time living, working, and contributing to the ecosystem while maintaining another home elsewhere.</p>
+      </div>
+      <div class="path-card">
+        <h3>Explorer's Path (30 people)</h3>
+        <p>Time Commitment: 75 nights per year</p>
+        <ul>
+          <li>Total accommodation contribution (2 years): $6,000</li>
+          <li>Effective rate: approximately $40 per night</li>
+        </ul>
+        <p>Ideal for digital nomads, entrepreneurs, creators, and remote workers who want to immerse themselves in the community through several extended stays each year.</p>
+      </div>
+      <div class="path-card">
+        <h3>Retreat Path (60 people)</h3>
+        <p>Time Commitment: 15 nights per year</p>
+        <ul>
+          <li>Total accommodation contribution (2 years): $3,000</li>
+          <li>Effective rate: approximately $100 per night</li>
+          <li>not including retreat participation fees</li>
+        </ul>
+        <p>Designed for people primarily seeking restoration, learning, coaching, and transformation while becoming part of the broader OMC network.</p>
+        <p><b>Many participants may begin through retreats before later choosing one of the longer-term community pathways.</b></p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:48px;">Outreach and Funnel</h3>
+    <p>Through the existing hotel operations at Pairadise Resort, we already come in contact with approximately 200 to 500 guests per month. The restaurant, community gatherings, workshops, and other offerings create additional exposure and visibility to the local and visiting community without even having fully tapped into our social media connections.</p>
+    <p>We are in the process of designing a discovery journey where people can get to know our community and the work around Behavioral Intelligence through public events such as workshops, festivals, talks, or short online or in-person connection games designed to help people experience meaningful human connection in a simple, accessible way.</p>
+    <p>From here we invite people to deepen their journey with us, from individual or group coaching all the way to multiple-day programs and immersions, both offline and online.</p>
+
+    <div class="funnel">
+      <div class="funnel-step"><b>Broad exposure</b><span>Hotel guests, events, social media</span></div>
+      <div class="funnel-arrow">↓</div>
+      <div class="funnel-step"><b>Connection game</b><span>AI-facilitated, scalable</span></div>
+      <div class="funnel-arrow">↓</div>
+      <div class="funnel-step"><b>Individual coaching</b><span>30-minute session</span></div>
+      <div class="funnel-arrow">↓</div>
+      <div class="funnel-step"><b>10-day immersive program</b><span>Practice &amp; embodiment</span></div>
+      <div class="funnel-arrow">↓</div>
+      <div class="funnel-branches">
+        <div><b>Founder</b>8 people<br>250 nights/yr</div>
+        <div><b>Co-creator</b>20 people<br>150 nights/yr</div>
+        <div><b>Explorer</b>30 people<br>75 nights/yr</div>
+        <div><b>Retreat</b>60 people<br>15 nights/yr</div>
+      </div>
+    </div>
+    <p>In this way, people can choose their level of engagement, build their individual and interpersonal capacity, and nurture human connections while at the same time already creating additional revenue for our project.</p>
+  </div>
+</section>
+
+<!-- APPENDIX 3 - TEAM -->
+<section id="team" class="anchor-offset">
+  <div class="wrap">
+    <h2>Appendix 3 - About Us - Who We Are</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="images/team-ting-jiang.jpg" alt="Ting Jiang"
+             onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/initials/svg?seed=Ting%20Jiang&backgroundColor=E4C4A8';">
+        <div>
+          <h3>Ting Jiang</h3>
+          <p>Ting is the founder of Hummingbird BI Tech Ltd. and the originator of the Behavioral Intelligence (BI) methodology - a framework bridging behavioral economics, neuroscience, depth psychology, and embodiment practice. Much of the foundational research and thinking behind BI was developed during her time at Duke University and refined over roughly a decade of applied work since. Ting leads the ecosystem's vision, methodology, and coaching practice, and is the driving force behind ventures including Pairadise Resort and Open Mind Center.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/team-jonathan-klodt.jpg" alt="Jonathan Klodt"
+             onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/initials/svg?seed=Jonathan%20Klodt&backgroundColor=E4C4A8';">
+        <div>
+          <h3>Jonathan Klodt</h3>
+          <p>Jonathan works alongside Ting for Hummingbird BI Tech Ltd. and supports strategy, legal &amp; financial architecture, and incubation infrastructure across the ecosystem. His work focuses on building the community, operational and governance systems - from ownership structures to venture incubation processes - that allow the company's ventures to scale sustainably while staying true to their founding principles.</p>
+          <p>As an entrepreneur, he co-founded several award-winning companies. As a cultural pioneer, he worked for the Global Ecovillage Network, lived in several intentional communities and ecovillages, and hosted transformative gatherings and festivals all around the world.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/team-karim-ghazzi.jpg" alt="Karim Ghazzi"
+             onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/initials/svg?seed=Karim%20Ghazzi&backgroundColor=E4C4A8';">
+        <div>
+          <h3>Karim Ghazzi</h3>
+          <p>Karim works alongside Ting and Jonathan at Hummingbird BI Tech Ltd. He is a marketing strategist with experience spanning finance, blockchain, food and beverage, and building with natural materials. As an entrepreneur, Karim founded several concept restaurants in Beirut, combining business strategy with hospitality and community building. Over the past several years, he has developed a strong interest in emerging technologies while also working on regenerative construction initiatives that explore natural materials, sustainable design, and community centered spaces.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/team-oliver-redman.jpg" alt="Oliver Redman"
+             onerror="this.onerror=null; this.src='https://api.dicebear.com/7.x/initials/svg?seed=Oliver%20Redman&backgroundColor=E4C4A8';">
+        <div>
+          <h3>Oliver Redman</h3>
+          <p>Oliver is a hospitality leader, entrepreneur and pioneer passionate about creating places, experiences and teams that people genuinely connect with. With a career shaped by hospitality, operations and leadership, he is driven by turning ideas into meaningful experiences and building cultures where people feel empowered to thrive. He enjoys challenging conventional thinking, exploring new ways of working and creating businesses that balance commercial success with human connection and purpose. At the heart of his approach is a belief that hospitality is about far more than great service — it is about creating communities, inspiring people and designing experiences that leave a lasting impression.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--clay-soft);">Get in touch</span>
+    <h2>For more info and to schedule a personal conversation, reach out to Ting Jiang</h2>
+    <div class="details">
+      <span>+66 98 872 9951</span>
+      <span><a href="mailto:ting.hummingbirdhabit@gmail.com">ting.hummingbirdhabit@gmail.com</a></span>
+    </div>
+    <div class="links">
+      <a href="https://pairadise.com" target="_blank" rel="noopener">https://pairadise.com</a>
+      <a href="https://hummingbirdhabit.com/Ting_Jiang_Linktree" target="_blank" rel="noopener">https://hummingbirdhabit.com/Ting_Jiang_Linktree</a>
+      <a href="https://hummingbirdhabit.com" target="_blank" rel="noopener">https://hummingbirdhabit.com</a>
+    </div>
+  </div>
+</div>
+<footer>Investment Opportunity: Open Mind Center (OMC) · Bridge Financing Proposal · August 2026</footer>
+
+
+<script>
+  // ============================================================
+  // PASSWORD GATE — casual protection only, not real security.
+  // Anyone who views page source or opens dev tools can find
+  // this value or the hidden content. Good for keeping random
+  // visitors out; not for anything truly confidential.
+  //
+  // TO CHANGE THE PASSWORD: edit the line below.
+  // ============================================================
+  const SITE_PASSWORD = "openmind2026";
+
+  (function () {
+    const body = document.body;
+    const form = document.getElementById('gate-form');
+    const input = document.getElementById('gate-input');
+    const err = document.getElementById('gate-err');
+    const gate = document.getElementById('gate');
+    const SESSION_KEY = 'omc_unlocked';
+
+    // sessionStorage can throw on some mobile browsers (private mode,
+    // file:// URLs, in-app browsers). Never let that break unlocking.
+    function safeGet(key) {
+      try { return sessionStorage.getItem(key); } catch (e) { return null; }
+    }
+    function safeSet(key, val) {
+      try { sessionStorage.setItem(key, val); } catch (e) { /* ignore */ }
+    }
+
+    function unlock() {
+      body.classList.remove('locked');
+      gate.style.display = 'none';
+      safeSet(SESSION_KEY, '1');
+    }
+
+    function tryUnlock() {
+      if (input.value === SITE_PASSWORD) {
+        unlock();
+      } else {
+        err.textContent = 'Incorrect password. Please try again.';
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    // Attach the interactive handlers FIRST, before anything that
+    // could throw — so the form always works even if storage fails.
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      tryUnlock();
+    });
+
+    // Skip the prompt if already unlocked earlier this browser session
+    if (safeGet(SESSION_KEY) === '1') {
+      unlock();
+    }
+  })();
+</script>
+
+</body>
+</html>
